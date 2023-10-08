@@ -1,13 +1,10 @@
-using System;
 using Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ResourceVisual : MonoBehaviour
 {
-    [FormerlySerializedAs("_currentGameResource")] [SerializeField]
-    private GameResource currentGameResource;
+    [SerializeField] private GameResource currentGameResource;
 
     private ObservableInt _currentCounter;
     private Text _gameResourceAmountText;
