@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Core;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +7,7 @@ using UnityEngine.UI;
 public class ProductionBuilding : MonoBehaviour
 {
     [SerializeField] private GameResource currentGameResource;
+    private const float ProductionTime = 2f;
 
     private void Awake()
     {

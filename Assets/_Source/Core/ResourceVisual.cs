@@ -1,3 +1,4 @@
+using System;
 using Core;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,10 @@ public class ResourceVisual : MonoBehaviour
     private void Awake()
     {
         _gameResourceAmountText = GetComponent<Text>();
+    }
+
+    private void Start()
+    {
         _currentCounter = ResourceBank.GetResource(currentGameResource);
         _gameResourceAmountText.text = _currentCounter.Value.ToString();
     }
