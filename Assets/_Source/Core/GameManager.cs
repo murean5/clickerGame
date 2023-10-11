@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Gradient productionGradientColor;
+    public Transform footer;
     private void Awake()
     {
         ResourceBank.ChangeResource(GameResource.Humans, 10);
