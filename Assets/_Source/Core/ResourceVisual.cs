@@ -19,11 +19,7 @@ public class ResourceVisual : MonoBehaviour
     {
         _currentCounter = ResourceBank.GetResource(currentGameResource);
         _gameResourceAmountText.text = _currentCounter.Value.ToString();
-    }
-
-    private void Update()
-    {
         _currentCounter.OnValueChanged =
-            value => _gameResourceAmountText.text = value.ToString();
+                    value => _gameResourceAmountText.text = value.ToString();
     }
 }
