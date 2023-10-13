@@ -56,6 +56,7 @@ public class ProductionBuilding : MonoBehaviour
     {
         _waitingSlider.value = _waitingSlider.maxValue;
         _productionButton.interactable = false;
+        _lvlUpButton.interactable = false;
         _waitingSlider.gameObject.SetActive(true);
         StartCoroutine(AddResource());
     }
@@ -74,6 +75,7 @@ public class ProductionBuilding : MonoBehaviour
         yield return new WaitForSeconds(_totalProductionTime);
         ResourceBank.ChangeResource(currentGameResource, _productAmount);
         _productionButton.interactable = true;
+        _lvlUpButton.interactable = true;
         _waitingSlider.gameObject.SetActive(false);
     }
 }
